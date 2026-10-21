@@ -18,3 +18,9 @@ Public shared skills for agent workflows.
 - `skills/autoreview`: shared closeout/code-review helper.
 - `skills/beam`: redacted read-only coding-session publication.
 - `skills/crabbox`: shared Crabbox/Testbox remote validation workflow.
+
+## Tooling
+
+- Validation uses Node.js 26, matching `.github/workflows/validate.yml`. Session viewer scripts are native TypeScript and run with `node`.
+- `scripts/validate-skills` imports PyYAML from `requirements-dev.txt` through the `python3` on `PATH`.
+- After edits, run the Validate section in `README.md`.
